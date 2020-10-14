@@ -148,7 +148,8 @@ public class GraknCoreRunner implements GraknRunner {
             graknProcess = executor.command(
                     "./grakn", "server",
                     "--port", Integer.toString(port),
-                    "--data", tmpDir.toAbsolutePath().toString()
+                    "--data", tmpDir.toAbsolutePath().toString(),
+                    "--debug"
             ).start();
 
             Thread.sleep(5000);
